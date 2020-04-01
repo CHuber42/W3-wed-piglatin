@@ -16,7 +16,7 @@ No special files should be necessary to load this file, all
 dependencies are bundled; simply open index.html in your browser.
 ##### **Warning: some CSS/Bootstrap clauses may not be supported by IE8 or below!**
 
-##### File layout:
+##### Development specs:
 
 Spec #1: Get input from user, store in variable as array of words
 Spec #2: Separate input into two categories: (Starts with Vowel) or (Starts with Consonant(s))
