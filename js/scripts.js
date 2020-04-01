@@ -33,17 +33,34 @@ function determineFirstChar(aWord){
 }
  
 function modifyAsConstant(aWord){
-  for (var i = 1; i < aWord.length; i++){
-    switch(aWord[i]){
-      case "a":;
-      case "e":;
-      case "i":;
-      case "o":;
-      case "u":
-        return [i];
-    }
+var i = 1;
+loop1:
+for (i; i < aWord.length; i++){
+  switch(aWord[i]){
+    case "a":;
+    case "e":;
+    case "i":;
+    case "o":;
+    case "u":
+      break loop1;
   }
+
+
+
+
+
+
+  }
+
+
+
+
+
+
 }
+
+
+
 
 $(document).ready(function(){
   $("form#pigLatinInput").submit(function(event) {
