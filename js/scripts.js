@@ -19,15 +19,47 @@
 
 // });
 
-
-
-
+function determineFirstChar(aWord){
+  switch(aWord[0]){
+    case "a":;
+    case "e":;
+    case "i":;
+    case "o":;
+    case "u":
+      return true;
+    default:
+      return false;
+  }
+}
+ 
+function modifyAsConstant(aWord){
+  for (var i = 1; i < aWord.length; i++){
+    switch(aWord[i]){
+      case "a":;
+      case "e":;
+      case "i":;
+      case "o":;
+      case "u":
+        return [i];
+    }
+  }
+}
 
 $(document).ready(function(){
   $("form#pigLatinInput").submit(function(event) {
     event.preventDefault();
-
+    var userInput = $("#sentenceInput").val().split(" ") //array
+    //install for loop here
+    var word = userInput[0];
+    var specTwo = determineFirstChar(word);
+      if(specTwo){
+        word = word.concat("way");
+      }
+      else{
+        var specFive = modifyAsConstant(word);
+        
+      }
     
-    
+  
   });
 });
