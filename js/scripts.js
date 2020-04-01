@@ -33,23 +33,33 @@ function determineFirstChar(aWord){
 }
  
 function modifyAsConstant(aWord){
-  var i = 1;
+  var i = 0;
   loop1:
-  for (i; i < aWord.length; i++){
-    switch(aWord[i]){
+  for (i = 0; i < aWord.length; i++){
+    console.log(i, aWord[i])
+    switch(aWord[i]){  //theater, quarter
       case "a":;
       case "e":;
       case "i":;
       case "o":;
       case "u":
         break loop1;
-    }
+      case "q":
+        if (aWord[(i+1)] == "u") {
+          i += 2;
+          console.log(i)
+          break loop1;
+        };
+    } //add 1 to
   }
+  console.log(i)
   var back = aWord.slice(i, aWord.length); //uare
+  console.log(back)
   var front = aWord.slice(0, i); //sq
+  console.log(front)
   var backfront = back.concat(front)
+  console.log(backfront);
 
-  
 
 
 }
