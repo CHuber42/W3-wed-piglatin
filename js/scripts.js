@@ -26,6 +26,11 @@ function determineFirstChar(aWord){
     case "i":;
     case "o":;
     case "u":
+    case "A":;
+    case "E":;
+    case "I":;
+    case "O":;
+    case "U":  
       return true;
     default:
       return false;
@@ -55,9 +60,9 @@ function modifyAsConstant(aWord){
  
   var front = aWord.slice(0, i); 
  
-  var backfront = back.concat(front)
+  var backfront = back.concat(front);
  
-  var finalWord = backfront.concat("ay ") ;
+  var finalWord = backfront.concat("ay ");
   return finalWord;
 }
 
@@ -77,6 +82,7 @@ $(document).ready(function(){
           var resultWord = modifyAsConstant(word);  
         }
       $("#pigLatinResults").append(resultWord); 
+
     }
   });
 });
