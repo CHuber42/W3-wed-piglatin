@@ -36,8 +36,7 @@ function modifyAsConstant(aWord){
   var i = 0;
   loop1:
   for (i = 0; i < aWord.length; i++){
-    console.log(i, aWord[i])
-    switch(aWord[i]){  //theater, quarter
+    switch(aWord[i]){  
       case "a":;
       case "e":;
       case "i":;
@@ -52,35 +51,32 @@ function modifyAsConstant(aWord){
         };
     } //add 1 to
   }
-  console.log(i)
-  var back = aWord.slice(i, aWord.length); //uare
-  console.log(back)
-  var front = aWord.slice(0, i); //sq
-  console.log(front)
+  var back = aWord.slice(i, aWord.length); 
+ 
+  var front = aWord.slice(0, i); 
+ 
   var backfront = back.concat(front)
-  console.log(backfront);
-
-
-
+ 
+  var finalWord = backfront.concat("ay ") ;
+  return finalWord;
 }
-// console.log(i)
+
 
 
 $(document).ready(function(){
   $("form#pigLatinInput").submit(function(event) {
     event.preventDefault();
     var userInput = $("#sentenceInput").val().split(" ") //array
-    //install for loop here
-    var word = userInput[0];
-    var specTwo = determineFirstChar(word);
-      if(specTwo){
-        word = word.concat("way");
-      }
-      else{
-        var specFive = modifyAsConstant(word);
-        
-      }
-    
-  
+    for (i=0; i < userInput.length; i++){
+      var word = userInput[i];
+      var specTwo = determineFirstChar(word);
+        if(specTwo){
+          var resultWord = word.concat("way ");
+        }
+        else{
+          var resultWord = modifyAsConstant(word);  
+        }
+      $("#pigLatinResults").append(resultWord); 
+    }
   });
 });
